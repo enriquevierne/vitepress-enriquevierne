@@ -41,6 +41,9 @@ form.post(route("biometik.products.store"), {
   },
 });
 ```
+::: info
+Retorna para rota [/biometik/products](http://127.0.0.1:8000/biometik/products)
+:::
 
 ### Requisição
 
@@ -83,7 +86,9 @@ Esta página é responsável pela edição de produtos da Biometik.
 ```js
 const props = defineProps(["product"]);
 ```
-#### product
+
+::: details product
+
 ```js
 created_at: "2024-02-20T19:19:23.000000Z";
 description: "Microcanulas 18g-50mm";
@@ -93,12 +98,15 @@ name: "18GX50MM";
 price: "194.00";
 updated_at: "2024-02-20T19:40:27.000000Z";
 ```
+
 ```php
 'name' => 'required|max:255|unique:biometik_products,name',
 'description' => 'nullable|max:255',
 'price' => 'required|numeric',
 'integration' => 'nullable|max:255',
 ```
+
+:::
 
 ### Ações
 
@@ -121,7 +129,10 @@ form.put(route("biometik.products.update", props.product), {
     });
   },
 });
-````
+```
+::: info
+Retorna para rota [/biometik/products](http://127.0.0.1:8000/biometik/products)
+:::
 
 ### Requisição
 
@@ -151,5 +162,4 @@ price: "194.00";
 updated_at: "2024-02-20T19:40:27.000000Z";
 ```
 
-::: info
-Retorna para rota [/biometik/products](http://127.0.0.1:8000/biometik/products)
+
