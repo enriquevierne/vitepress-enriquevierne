@@ -83,35 +83,35 @@ export default defineConfig({
                 items: [
                   {
                     text: "ChangeOwner",
-                    link: "/purchases/changeOwner",
+                    link: "/biometik/purchases/changeOwner",
                   },
                   {
                     text: "Form",
-                    link: "/purchases/form",
+                    link: "/biometik/purchases/form",
                   },
                   {
                     text: "Index",
-                    link: "/purchases/index",
+                    link: "/biometik/purchases/index",
                   },
                   {
                     text: "IndexProcess",
-                    link: "/purchases/indexProcess",
+                    link: "/biometik/purchases/indexProcess",
                   },
                   {
                     text: "Print",
-                    link: "/purchases/print",
+                    link: "/biometik/purchases/print",
                   },
                   {
                     text: "Process",
-                    link: "/purchases/process",
+                    link: "/biometik/purchases/process",
                   },
                   {
                     text: "Show",
-                    link: "/purchases/show",
+                    link: "/biometik/purchases/show",
                   },
                   {
                     text: "Tracking",
-                    link: "/purchases/tracking",
+                    link: "/biometik/purchases/tracking",
                   },
                 ],
               },
