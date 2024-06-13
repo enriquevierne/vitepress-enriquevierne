@@ -150,7 +150,7 @@ import { toast } from "vue3-toastify"; //notificação
 //requisição post para adição do produto ao pedido
 form.post(route("biometik.purchases.purchaseProducts.store", props.purchase), {
   preserveState: false,
-  preserveScroll: true,
+  preserveScroll: `true`,
   onSuccess: () => {
     toast.success("Produto adicionado", {
       autoClose: 1500,
