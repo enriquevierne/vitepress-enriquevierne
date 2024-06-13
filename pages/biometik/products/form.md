@@ -99,13 +99,6 @@ price: "194.00";
 updated_at: "2024-02-20T19:40:27.000000Z";
 ```
 
-```php
-'name' => 'required|max:255|unique:biometik_products,name',
-'description' => 'nullable|max:255',
-'price' => 'required|numeric',
-'integration' => 'nullable|max:255',
-```
-
 :::
 
 ### Ações

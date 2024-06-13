@@ -5,12 +5,13 @@ export default defineConfig({
   title: "BioDoc",
   description: "Documentação do sistema desenvolvido por DragonFly e Laboratório Biometil, BioSystem.",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
-    ],
-
+    outline: {
+      level: "deep",
+      label: "Neste página",
+    },
+    search: {
+      provider: "local",
+    },
     sidebar: [
       {
         text: "Getting Started",
@@ -22,6 +23,7 @@ export default defineConfig({
       },
       {
         text: "Pages",
+        collapsed: true,
         items: [
           {
             text: "Auth",
@@ -29,23 +31,23 @@ export default defineConfig({
             items: [
               {
                 text: "ConfirmPassword",
-                link: "/auth/confirmPassword",
+                link: "pages/auth/confirmPassword",
               },
               {
                 text: "ForgotPassword",
-                link: "/auth/forgotPassword",
+                link: "pages/auth/forgotPassword",
               },
               {
                 text: "Login",
-                link: "/auth/login",
+                link: "pages/auth/login",
               },
               {
                 text: "ResetPassword",
-                link: "/auth/resetPassword",
+                link: "pages/auth/resetPassword",
               },
               {
                 text: "VerifyEmail",
-                link: "/auth/verifyEmail",
+                link: "pages/auth/verifyEmail",
               },
             ],
           },
@@ -59,11 +61,11 @@ export default defineConfig({
                 items: [
                   {
                     text: "Form",
-                    link: "/biometik/products/form",
+                    link: "pages/biometik/products/form",
                   },
                   {
                     text: "Index",
-                    link: "/biometik/products/index",
+                    link: "pages/biometik/products/index",
                   },
                 ],
               },
@@ -73,7 +75,7 @@ export default defineConfig({
                 items: [
                   {
                     text: "Form",
-                    link: "/biometik/purchaseProducts/form",
+                    link: "pages/biometik/purchaseProducts/form",
                   },
                 ],
               },
@@ -83,35 +85,35 @@ export default defineConfig({
                 items: [
                   {
                     text: "ChangeOwner",
-                    link: "/biometik/purchases/changeOwner",
+                    link: "pages/biometik/purchases/changeOwner",
                   },
                   {
                     text: "Form",
-                    link: "/biometik/purchases/form",
+                    link: "pages/biometik/purchases/form",
                   },
                   {
                     text: "Index",
-                    link: "/biometik/purchases/index",
+                    link: "pages/biometik/purchases/index",
                   },
                   {
                     text: "IndexProcess",
-                    link: "/biometik/purchases/indexProcess",
+                    link: "pages/biometik/purchases/indexProcess",
                   },
                   {
                     text: "Print",
-                    link: "/biometik/purchases/print",
+                    link: "pages/biometik/purchases/print",
                   },
                   {
                     text: "Process",
-                    link: "/biometik/purchases/process",
+                    link: "pages/biometik/purchases/process",
                   },
                   {
                     text: "Show",
-                    link: "/biometik/purchases/show",
+                    link: "pages/biometik/purchases/show",
                   },
                   {
                     text: "Tracking",
-                    link: "/biometik/purchases/tracking",
+                    link: "pages/biometik/purchases/tracking",
                   },
                 ],
               },
@@ -123,11 +125,11 @@ export default defineConfig({
             items: [
               {
                 text: "Full",
-                link: "/commissionReports/full",
+                link: "pages/commissionReports/full",
               },
               {
                 text: "Simple",
-                link: "/commissionReports/simple",
+                link: "pages/commissionReports/simple",
               },
             ],
           },
@@ -137,11 +139,11 @@ export default defineConfig({
             items: [
               {
                 text: "Form",
-                link: "/commissions/form",
+                link: "pages/commissions/form",
               },
               {
                 text: "Index",
-                link: "/commissions/index",
+                link: "pages/commissions/index",
               },
             ],
           },
@@ -151,7 +153,7 @@ export default defineConfig({
             items: [
               {
                 text: "CustomerSearch",
-                link: "/financial/customerSearch",
+                link: "pages/financial/customerSearch",
               },
             ],
           },
@@ -161,19 +163,19 @@ export default defineConfig({
             items: [
               {
                 text: "Create",
-                link: "/goals/create",
+                link: "pages/goals/create",
               },
               {
                 text: "Edit",
-                link: "/goals/edit",
+                link: "pages/goals/edit",
               },
               {
                 text: "History",
-                link: "/goals/history",
+                link: "pages/goals/history",
               },
               {
                 text: "Index",
-                link: "/goals/index",
+                link: "pages/goals/index",
               },
             ],
           },
@@ -183,15 +185,15 @@ export default defineConfig({
             items: [
               {
                 text: "Create",
-                link: "/holidays/create",
+                link: "pages/holidays/create",
               },
               {
                 text: "Edit",
-                link: "/holidays/edit",
+                link: "pages/holidays/edit",
               },
               {
                 text: "Index",
-                link: "/holidays/index",
+                link: "pages/holidays/index",
               },
             ],
           },
@@ -201,19 +203,19 @@ export default defineConfig({
             items: [
               {
                 text: "Form",
-                link: "/installments/form",
+                link: "pages/installments/form",
               },
               {
                 text: "Index",
-                link: "/installments/index",
+                link: "pages/installments/index",
               },
               {
                 text: "PreviewItau",
-                link: "/installments/previewItau",
+                link: "pages/installments/previewItau",
               },
               {
                 text: "PreviewUnicred",
-                link: "/installments/previewUnicred",
+                link: "pages/installments/previewUnicred",
               },
             ],
           },
@@ -223,31 +225,31 @@ export default defineConfig({
             items: [
               {
                 text: "Biometik",
-                link: "/menus/biometik",
+                link: "pages/menus/biometik",
               },
               {
                 text: "Commercial",
-                link: "/menus/commercial",
+                link: "pages/menus/commercial",
               },
               {
                 text: "Configurations",
-                link: "/menus/configurations",
+                link: "pages/menus/configurations",
               },
               {
                 text: "Expedition",
-                link: "/menus/expedition",
+                link: "pages/menus/expedition",
               },
               {
                 text: "Financial",
-                link: "/menus/financial",
+                link: "pages/menus/financial",
               },
               {
                 text: "Outsiders",
-                link: "/menus/outsiders",
+                link: "pages/menus/outsiders",
               },
               {
                 text: "Quality",
-                link: "/menus/quality",
+                link: "pages/menus/quality",
               },
             ],
           },
@@ -257,15 +259,15 @@ export default defineConfig({
             items: [
               {
                 text: "Form",
-                link: "/monthboard/form",
+                link: "pages/monthboard/form",
               },
               {
                 text: "Index",
-                link: "/monthboard/index",
+                link: "pages/monthboard/index",
               },
               {
                 text: "Show",
-                link: "/monthboard/show",
+                link: "pages/monthboard/show",
               },
             ],
           },
@@ -275,7 +277,7 @@ export default defineConfig({
             items: [
               {
                 text: "Form",
-                link: "/particleCounter/form",
+                link: "pages/particleCounter/form",
               },
             ],
           },
@@ -285,7 +287,7 @@ export default defineConfig({
             items: [
               {
                 text: "Index",
-                link: "/permissions/index",
+                link: "pages/permissions/index",
               },
             ],
           },
@@ -295,11 +297,11 @@ export default defineConfig({
             items: [
               {
                 text: "Index",
-                link: "/productionOrders/index",
+                link: "pages/productionOrders/index",
               },
               {
                 text: "Show",
-                link: "/productionOrders/show",
+                link: "pages/productionOrders/show",
               },
             ],
           },
@@ -309,7 +311,7 @@ export default defineConfig({
             items: [
               {
                 text: "Form",
-                link: "/productionPurchases/form",
+                link: "pages/productionPurchases/form",
               },
             ],
           },
@@ -323,17 +325,17 @@ export default defineConfig({
                 items: [
                   {
                     text: "UpdatePasswordForm",
-                    link: "/profile/partials/updatePasswordForm",
+                    link: "pages/profile/partials/updatePasswordForm",
                   },
                   {
                     text: "UpdateProfileInformationForm",
-                    link: "/profile/partials/updateProfileInformationForm",
+                    link: "pages/profile/partials/updateProfileInformationForm",
                   },
                 ],
               },
               {
                 text: "Edit",
-                link: "/profile/edit",
+                link: "pages/profile/edit",
               },
             ],
           },
@@ -343,51 +345,51 @@ export default defineConfig({
             items: [
               {
                 text: "ChangeOwner",
-                link: "/purchases/changeOwner",
+                link: "pages/purchases/changeOwner",
               },
               {
                 text: "CheckUser",
-                link: "/purchases/checkUser",
+                link: "pages/purchases/checkUser",
               },
               {
                 text: "Create",
-                link: "/purchases/create",
+                link: "pages/purchases/create",
               },
               {
                 text: "Edit",
-                link: "/purchases/edit",
+                link: "pages/purchases/edit",
               },
               {
                 text: "FinCheckout",
-                link: "/purchases/finCheckout",
+                link: "pages/purchases/finCheckout",
               },
               {
                 text: "Index",
-                link: "/purchases/index",
+                link: "pages/purchases/index",
               },
               {
                 text: "IndexProcess",
-                link: "/purchases/indexProcess",
+                link: "pages/purchases/indexProcess",
               },
               {
                 text: "PDF",
-                link: "/purchases/pdf",
+                link: "pages/purchases/pdf",
               },
               {
                 text: "Print",
-                link: "/purchases/print",
+                link: "pages/purchases/print",
               },
               {
                 text: "Process",
-                link: "/purchases/process",
+                link: "pages/purchases/process",
               },
               {
                 text: "Show",
-                link: "/purchases/show",
+                link: "pages/purchases/show",
               },
               {
                 text: "Tracking",
-                link: "/purchases/tracking",
+                link: "pages/purchases/tracking",
               },
             ],
           },
@@ -397,19 +399,19 @@ export default defineConfig({
             items: [
               {
                 text: "GroupCommissions",
-                link: "/reports/groupCommissions",
+                link: "pages/reports/groupCommissions",
               },
               {
                 text: "GroupPurchases",
-                link: "/reports/groupPurchases",
+                link: "pages/reports/groupPurchases",
               },
               {
                 text: "RankClientPurchases",
-                link: "/reports/rankClientPurchases",
+                link: "pages/reports/rankClientPurchases",
               },
               {
                 text: "RankProductPurchases",
-                link: "/reports/rankProductPurchases",
+                link: "pages/reports/rankProductPurchases",
               },
             ],
           },
@@ -419,15 +421,15 @@ export default defineConfig({
             items: [
               {
                 text: "Form",
-                link: "/scheduling/form",
+                link: "pages/scheduling/form",
               },
               {
                 text: "Index",
-                link: "/scheduling/index",
+                link: "pages/scheduling/index",
               },
               {
                 text: "Show",
-                link: "/scheduling/show",
+                link: "pages/scheduling/show",
               },
             ],
           },
@@ -437,11 +439,11 @@ export default defineConfig({
             items: [
               {
                 text: "Form",
-                link: "/tv/form",
+                link: "pages/tv/form",
               },
               {
                 text: "Index",
-                link: "/tv/index",
+                link: "pages/tv/index",
               },
             ],
           },
@@ -451,25 +453,111 @@ export default defineConfig({
             items: [
               {
                 text: "Create",
-                link: "/users/create",
+                link: "pages/users/create",
               },
               {
                 text: "Edit",
-                link: "/users/edit",
+                link: "pages/users/edit",
               },
               {
                 text: "Index",
-                link: "/users/index",
+                link: "pages/users/index",
               },
               {
                 text: "Show",
-                link: "/users/show",
+                link: "pages/users/show",
               },
             ],
           },
-          { text: "Dashboard", link: "/dashboard" },
-          { text: "Error", link: "/error" },
-          { text: "Welcome", link: "/welcome" },
+          { text: "Dashboard", link: "pages/dashboard" },
+          { text: "Error", link: "pages/error" },
+          { text: "Welcome", link: "pages/welcome" },
+        ],
+      },
+      {
+        text: "Models",
+        collapsed: true,
+        items: [
+          {
+            text: "BiometikProduct",
+            link: "/models/biometikProduct",
+          },
+          {
+            text: "BiometikPurchase",
+            link: "/models/biometikPurchase",
+          },
+          {
+            text: "BiometikPurchaseFile",
+            link: "/models/biometikPurchaseFile",
+          },
+          {
+            text: "BiometikPurchaseProduct",
+            link: "/models/biometikPurchaseProduct",
+          },
+          {
+            text: "Commission",
+            link: "/models/commission",
+          },
+          {
+            text: "Goal",
+            link: "/models/goal",
+          },
+          {
+            text: "Holiday",
+            link: "/models/holiday",
+          },
+          {
+            text: "Installment",
+            link: "/models/installment",
+          },
+          {
+            text: "Monthboard",
+            link: "/models/monthboard",
+          },
+          {
+            text: "NonPayment",
+            link: "/models/nonPayment",
+          },
+          {
+            text: "Permission",
+            link: "/models/permission",
+          },
+          {
+            text: "ProductionOrder",
+            link: "/models/productionOrder",
+          },
+          {
+            text: "ProductionPurchase",
+            link: "/models/productionPurchase",
+          },
+          {
+            text: "Purchase",
+            link: "/models/purchase",
+          },
+          {
+            text: "PurchaseFile",
+            link: "/models/purchaseFile",
+          },
+          {
+            text: "PurchaseLog",
+            link: "/models/purchaseLog",
+          },
+          {
+            text: "Report",
+            link: "/models/report",
+          },
+          {
+            text: "Scheduling",
+            link: "/models/scheduling",
+          },
+          {
+            text: "TvConfig",
+            link: "/models/tvConfig",
+          },
+          {
+            text: "User",
+            link: "/models/user",
+          },
         ],
       },
     ],

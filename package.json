@@ -3,7 +3,7 @@
     "vitepress": "^1.2.3"
   },
   "scripts": {
-    "docs:dev": "vitepress dev",
+    "docs:dev": "vitepress dev --host=192.168.1.71",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   }
