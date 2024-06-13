@@ -5,7 +5,7 @@ outline: [1, 6]
 # Commission
 
 ::: info Descrição
-Nesta página podemos ver as comissões e suas regras de cada vendedor.
+Nesta página podemos ver as comissões e suas regras para cada vendedor.
 :::
 
 ### Model
