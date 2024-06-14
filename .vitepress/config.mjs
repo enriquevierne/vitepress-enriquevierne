@@ -543,10 +543,6 @@ export default defineConfig({
             link: "/models/purchaseLog",
           },
           {
-            text: "Report",
-            link: "/models/report",
-          },
-          {
             text: "Scheduling",
             link: "/models/scheduling",
           },

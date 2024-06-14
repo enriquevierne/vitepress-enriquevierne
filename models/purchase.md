@@ -2,42 +2,41 @@
 outline: [1, 6]
 ---
 
-# BiometikPurchase
+# Purchase
 
 ::: info Descrição
-Nesta página podemos ver o model da tabela `biometik_purchases`.
+Nesta página podemos ver o model da tabela `purchases`.
 :::
 
 ### Model
 
-| Coluna                      |       Tipo       | NOTNULL |                                    Descrição |
-| --------------------------- | :--------------: | :-----: | -------------------------------------------: |
-| 'id'                        | bigint unsigned |  `true`   |                 Identificador único e serial |
-| 'client_id'                 | bigint unsigned |  `true`   |                            ID do cliente |
-| 'client_address_id'         |       int       |  `true`   |                ID do endereço do cliente |
-| 'client_corporate_name'     |  varchar(255)   |  `true`   |                              Nome do cliente |
-| 'client_fancy_name'         |  varchar(255)   |  `true`   |                                   Prescritor |
-| 'client_document'           |  varchar(255)   |         |                                  CNPJ ou CPF |
-| 'client_state_registration' |  varchar(255)   |         |                           Inscrição Estadual |
-| 'client_status'             |  varchar(255)   |         |                            Status do cliente |
-| 'client_state'              |  varchar(255)   |  `true`   |                                UF do cliente |
-| 'client_board'              |  varchar(255)   |  `true`   |                          Conselho do cliente |
-| 'client_group'              |  varchar(255)   |         |                             Grupo do cliente |
-| 'client_phone'              |  varchar(255)   |         |                          Telefone do cliente |
-| 'client_email'              |  varchar(255)   |         |                             Email do cliente |
-| 'tracking'                  |  varchar(255)   |         |                           ID de rastreio |
-| 'user_id'                   | bigint unsigned |  `true`   |                 ID do usuário dono do pedido |
-| 'coop_id'                   | bigint unsigned |         |                       ID do vendedor externo |
-| 'date'                      |      date       |  `true`   |                               Data do pedido |
-| 'means_of_transport'        |  varchar(255)   |  `true`   |                          Forma de transporte |
-| 'means_of_payment'          |  varchar(255)   |  `true`   |                           Forma de pagamento |
-| 'receipt_number'            |  varchar(255)   |         |                                  Nota fiscal |
-| 'discount'                  |  double(10,2)   |  `true`   |                           Desconto do pedido |
-| 'total'                     |  double(10,2)   |  `true`   |                        Valor total do pedido |
-| 'receipt_total'             |  decimal(10,2)  |  `true`   |                         Valor da nota fiscal |
-| 'status'                    |  varchar(255)   |  `true`   |                             Status do pedido |
-| 'integration'               |  varchar(255)   |         | Código de integração com sistema da biometik |
-| 'created_at'                |    timestamp    |         |                              Data de criação |
-| 'updated_at'                |    timestamp    |         |                    Data da última atualização |
-| 'shipping'                  |  decimal(10,2)  |  `true`   |                              Frete do pedido |
-| 'observation'               |      text       |         |                         Observação do pedido |
+| Coluna                           |      Tipo       | NOTNULL |                    Descrição |
+| -------------------------------- | :-------------: | :-----: | ---------------------------: |
+| 'id'                             | bigint unsigned | `true`  | Identificador único e serial |
+| 'user_id'                        | bigint unsigned | `true`  | ID do usuário dono do pedido |
+| 'purchase_process'               |   varchar(50)   | `true`  |             Status do pedido |
+| 'purchase_date'                  |      date       | `true`  |               Data do pedido |
+| 'purchase_clip'                  |       int       |         |             Grampo do pedido |
+| 'purchase_production'            |   varchar(50)   |         |           Produção do pedido |
+| 'purchase_client'                |       int       | `true`  |            Código do cliente |
+| 'purchase_client_corporate_name' |  varchar(255)   | `true`  |                 Razão social |
+| 'purchase_client_fancy_name'     |  varchar(255)   | `true`  |                   Prescritor |
+| 'purchase_client_document'       |  varchar(255)   |         |                  CPF ou CNPJ |
+| 'purchase_client_status'         |   varchar(10)   |         |            Status do cliente |
+| 'purchase_client_state'          |   varchar(2)    | `true`  |                UF do cliente |
+| 'purchase_client_board'          |   varchar(30)   | `true`  |          Conselho do cliente |
+| 'purchase_tracking'              |   varchar(50)   |         | Código de rastreio do pedido |
+| 'purchase_number'                |       int       | `true`  |             Número do pedido |
+| 'purchase_payment'               |   varchar(50)   | `true`  |  Meio de pagamento do pedido |
+| 'purchase_value'                 |  decimal(10,2)  | `true`  |              Valor do pedido |
+| 'purchase_observation'           |      text       |         |         Observação do pedido |
+| 'created_at'                     |    timestamp    |         |              Data de criação |
+| 'updated_at'                     |    timestamp    |         |   Data da última atualização |
+| 'purchase_client_group'          |  varchar(100)   |         |             Grupo do cliente |
+| 'purchase_doc'                   |       int       |         |        Nota fiscal do pedido |
+| 'purchase_ieptb'                 |   tinyint(1)    |         |                              |
+| 'purchase_irs'                   |   tinyint(1)    |         |                              |
+| 'purchase_late_cob'              |   tinyint(1)    |         |                              |
+| 'purchase_itau'                  |   tinyint(1)    |         |                              |
+| 'purchase_no_restriction'        |   tinyint(1)    |         |                              |
+| 'purchase_coop_seller'           | bigint unsigned |         |   Vendedor externo do pedido |
