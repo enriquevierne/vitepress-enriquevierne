@@ -4,7 +4,15 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "BioDoc",
   description: "Documentação do sistema desenvolvido por DragonFly e Laboratório Biometil, BioSystem.",
+  head: [
+    ["link", { rel: "icon", href: "/logo.png" }],
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" }],
+    ["link", { href: "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap", rel: "stylesheet" }],
+  ],
   themeConfig: {
+    logo: "/logo.png",
+    editLink: {},
     outline: {
       level: "deep",
       label: "Neste página",
@@ -553,6 +561,130 @@ export default defineConfig({
           {
             text: "User",
             link: "/models/user",
+          },
+        ],
+      },
+      {
+        text: "Permissions",
+        collapsed: true,
+        items: [
+          {
+            text: "BiometikProduct",
+            link: "/permissions/biometikProduct",
+          },
+          {
+            text: "BiometikPurchase",
+            link: "/permissions/biometikPurchase",
+          },
+          {
+            text: "BiometikPurchaseFile",
+            link: "/permissions/biometikPurchaseFile",
+          },
+          {
+            text: "BiometikPurchaseProduct",
+            link: "/permissions/biometikPurchaseProduct",
+          },
+          {
+            text: "Commission",
+            link: "/permissions/commission",
+          },
+          {
+            text: "Goal",
+            link: "/permissions/goal",
+          },
+          {
+            text: "Holiday",
+            link: "/permissions/holiday",
+          },
+          {
+            text: "Installment",
+            link: "/permissions/installment",
+          },
+          {
+            text: "Monthboard",
+            link: "/permissions/monthboard",
+          },
+          {
+            text: "NonPayment",
+            link: "/permissions/nonPayment",
+          },
+          {
+            text: "Permission",
+            link: "/permissions/permission",
+          },
+          {
+            text: "ProductionOrder",
+            link: "/permissions/productionOrder",
+          },
+          {
+            text: "ProductionPurchase",
+            link: "/permissions/productionPurchase",
+          },
+          {
+            text: "Purchase",
+            link: "/permissions/purchase",
+          },
+          {
+            text: "PurchaseFile",
+            link: "/permissions/purchaseFile",
+          },
+          {
+            text: "PurchaseLog",
+            link: "/permissions/purchaseLog",
+          },
+          {
+            text: "Scheduling",
+            link: "/permissions/scheduling",
+          },
+          {
+            text: "TvConfig",
+            link: "/permissions/tvConfig",
+          },
+          {
+            text: "User",
+            link: "/permissions/user",
+          },
+        ],
+      },
+      {
+        text: "Routes",
+        collapsed: true,
+        items: [
+          {
+            text: "Menus",
+            link: "/routes/menu/menuRoutes",
+          },
+          {
+            text: "Dashboard",
+            link: "/routes/dashboard/dashboardRoutes",
+          },
+          {
+            text: "Commercial",
+            link: "/routes/commercial/commercialRoutes",
+          },
+          {
+            text: "External",
+            link: "/routes/external/externalRoutes",
+          },
+          {
+            text: "Expedition",
+            link: "/routes/expedition/expeditionRoutes",
+          },
+          {
+            text: "Financial",
+            link: "/routes/financial/financialRoutes",
+          },
+          {
+            text: "Quality",
+            link: "/routes/quality/qualityRoutes",
+          },
+          {
+            text: "Configurations",
+            link: "/routes/configurations/configurationsRoutes",
+          },
+          {
+            text: "Biometik",
+            link: "/routes/biometik/biometikRoutes",
           },
         ],
       },
